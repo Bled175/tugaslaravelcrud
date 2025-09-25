@@ -3,7 +3,6 @@
 use App\Http\Controllers\ControllerDepartemen;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\SessionController;
-use App\Http\Middleware\initamu;
 use App\Models\departemen;
 use Illuminate\Support\Facades\Route;
 
