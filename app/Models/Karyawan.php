@@ -9,5 +9,11 @@ class Karyawan extends Model
 {
     use HasFactory;
     protected $table = 'karyawan';
-    protected $fill = ['nip','nama_karyawan','gaji_karyawan','alamat','jenis_kelamin','departemen_id'];
+    protected $primaryKey = 'nip';
+    protected $fillable = ['nip','nama_karyawan','gaji_karyawan','alamat','jenis_kelamin','departemen_id'];
+    
+    public function departemen()
+    {
+        return $this->belongsTo(Departemen::class, 'departemen_id');
+    }
 }
